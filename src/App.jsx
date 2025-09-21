@@ -1,0 +1,35 @@
+
+import './App.css'
+import Batmans from './Batmans'
+import Counter from './Counter'
+
+function App() {
+    function handleClick(){
+      alert('i am clicked')
+    }
+
+    const handleClick2 = () =>{
+      alert('clicked 2')
+    }
+
+    const handleAdd5 = (num) => {
+      const newNum = num + 5;
+      alert(newNum);
+    }
+  return (
+    <>
+      
+      <h1>Vite + React</h1>
+      <Counter></Counter>
+      <Batmans></Batmans>
+
+      <button onClick={handleClick}>Click Me</button>
+      <button onClick={handleClick2}>Click Me 2</button>
+      <button onClick={() => alert('clicked 3')}>Click Me 3</button>
+
+      <button onClick={() => handleAdd5(10)}>Click Me 4</button>
+    </>
+  )
+}
+
+export default App
